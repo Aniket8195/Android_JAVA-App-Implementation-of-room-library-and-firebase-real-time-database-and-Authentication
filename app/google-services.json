@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "357781328644",
+    "project_id": "datab-4fdea",
+    "storage_bucket": "datab-4fdea.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:357781328644:android:4b9fbfd7d7feaf31503651",
+        "android_client_info": {
+          "package_name": "com.example.datab"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "357781328644-hmup87as5iv9o8qd5utjblsff1ikb1n4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAX-_PMmxJbtVXLpiiqoSj07jqPdJEGU2M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "357781328644-hmup87as5iv9o8qd5utjblsff1ikb1n4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
