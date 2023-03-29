@@ -8,6 +8,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 
@@ -34,16 +37,24 @@ public class MainActivity extends AppCompatActivity  {
             String n=name.getText().toString();
             String e=email.getText().toString();
             dataHelper.dataDao().addData(new Data(n,e));
+            ArrayList<Data>list=(ArrayList<Data>) dataHelper.dataDao().getAll();
+            for(int i=0;i<list.size();i++){
+                s=(i+1)+" "+"Name:"+list.get(i).getName()+" "+"Email:"+list.get(i).getEmail();
+                slist.add(i,s);
+            }
+            // Write a message to the database
+            FirebaseDatabase database = FirebaseDatabase.getInstance();
+            DatabaseReference myRef = database.getReference("Data");
+
+            myRef.setValue(list);
 
         }
     });
 
 
-        ArrayList<Data>list=(ArrayList<Data>) dataHelper.dataDao().getAll();
-        for(int i=0;i<list.size();i++){
-            s=(i+1)+" "+"Name:"+list.get(i).getName()+" "+"Email:"+list.get(i).getEmail();
-            slist.add(i,s);
-        }
+
+
+
 
     data.setOnClickListener(new View.OnClickListener() {
         @Override
